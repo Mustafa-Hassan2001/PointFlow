@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pointnet-s3dis"
+version = "0.1.0"
+description = "PyTorch re-implementation of PointNet for 3D point cloud classification and semantic segmentation on S3DIS"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = ["torch>=2.0", "numpy>=1.23", "tqdm>=4.60"]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.setuptools.packages.find]
+include = ["pointnet*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
